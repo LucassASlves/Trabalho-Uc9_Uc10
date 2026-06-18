@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Contas a Receber</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="../../js/config.js"></script>
+    <script src="../../js/contasreceber/list.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Controle de Estoque</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="index.html">Contas a Receber</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contas a Receber</h2>
+        <a href="form.html" class="button">Nova Conta</a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Vencimento</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-contas"></tbody>
+        </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace ControleEstoque.API.Migrations
+{
+    /// <inheritdoc />
+    public partial class Atividade : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<int>(
+                name: "FormaPagamentoId",
+                table: "Pedidos",
+                type: "int",
+                nullable: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pedidos_FormaPagamentoId",
+                table: "Pedidos",
+                column: "FormaPagamentoId");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Pedidos_FormasPagamento_FormaPagamentoId",
+                table: "Pedidos",
+                column: "FormaPagamentoId",
+                principalTable: "FormasPagamento",
+                principalColumn: "Id");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropForeignKey(
+                name: "FK_Pedidos_FormasPagamento_FormaPagamentoId",
+                table: "Pedidos");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Pedidos_FormaPagamentoId",
+                table: "Pedidos");
+
+            migrationBuilder.DropColumn(
+                name: "FormaPagamentoId",
+                table: "Pedidos");
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Fornecedores</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="../../js/config.js"></script>
+    <script src="../../js/fornecedores/list.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Controle de Estoque</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="index.html">Fornecedores</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Fornecedores</h2>
+        <a href="form.html" class="button">Novo Fornecedor</a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Razão Social</th>
+                    <th>CNPJ</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-fornecedores"></tbody>
+        </table>
+    </main>
+</body>
+</html>

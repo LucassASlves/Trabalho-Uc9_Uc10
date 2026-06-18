@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Fornecedor</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="../../js/config.js"></script>
+    <script src="../../js/fornecedores/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Controle de Estoque</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="index.html">Fornecedores</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="titulo-pagina">Novo Fornecedor</h2>
+        
+        <form id="form-fornecedor">
+            <label for="nome">Razão Social (Nome):</label>
+            <input type="text" id="nome" required>
+
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" required>
+
+            <button type="submit">Salvar</button>
+            <a href="index.html" class="button" style="background-color: #6c757d;">Cancelar</a>
+        </form>
+    </main>
+</body>
+</html>

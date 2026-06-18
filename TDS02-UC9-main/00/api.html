@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="idFornecedor">ID:</p>
+    <p id="nomeFornecedor">Nome Fantasia:</p>
+    <p id="cpnjFornecedor">CNPJ:</p>
+
+    <script>
+        /*
+        [
+            {
+                "id": 1,
+                "nomeFantasia": "Distribuidora Gama",
+                "cnpj": "12345678000199"
+            },
+            {
+                "id": 2,
+                "nomeFantasia": "Loja Tech",
+                "cnpj": "98765432000188"
+            },
+            {
+                "id": 3,
+                "nomeFantasia": "Mega Eletronicos",
+                "cnpj": "11223344000155"
+            },
+            {
+                "id": 4,
+                "nomeFantasia": "Importadora Digital",
+                "cnpj": "55667788000122"
+            }
+            ]
+        */
+
+        const idFornecedor = document.getElementById("idFornecedor")
+        const nomeFornecedor = document.getElementById("nomeFornecedor")
+        const cpnjFornecedor = document.getElementById("cpnjFornecedor")
+
+        const URL = "minhaAPI.com"
+
+        async function buscarDadosFornecedor() {
+            const resultado = await fetch(URL);
+            const dadosDoFornecedor = await resultado.json();
+
+            dadosDoFornecedor.forEach(f => {
+                
+            });
+        }
+        
+
+    </script>
+</body>
+</html>
